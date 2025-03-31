@@ -1,0 +1,17 @@
+# Solicitar as 5 notas do usuário e armazená-las em uma lista
+notas = []
+for i in range(1, 6):
+    nota = float(input(f"Digite a nota {i}: "))
+    notas.append(nota)
+
+# Descartar a maior e a menor nota
+nota_maxima = max(notas)
+nota_minima = min(notas)
+notas.remove(nota_maxima)
+notas.remove(nota_minima)
+
+# Calcular a média das 3 notas restantes
+media = sum(notas) / len(notas)
+
+# Exibir a média das 3 notas restantes
+print(f"Média das notas (descontando a maior e a menor): {media:.1f}")

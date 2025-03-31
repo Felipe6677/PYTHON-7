@@ -1,0 +1,25 @@
+# Função para adicionar convidados
+def adicionar_convidados():
+    convidados = []
+    i = 1
+    while True:
+        nome = input(f"Digite o nome do convidado {i} (ou 'fim' para terminar): ")
+        if nome.lower() == 'fim':  # Condição de término
+            break
+        convidados.append(nome)
+        i += 1
+    return convidados
+
+# Função principal
+def main():
+    convidados = adicionar_convidados()
+
+    # Remover duplicados usando set e ordenar a lista
+    convidados_unicos = sorted(set(convidados))
+
+    print("Lista final de convidados (sem duplicatas e ordenada):")
+    print(convidados_unicos)
+
+# Executa o programa
+if __name__ == "__main__":
+    main()
